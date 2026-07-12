@@ -20,13 +20,21 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Homebrew
-        uses: Homebrew/actions/setup-homebrew@master
+        uses: Homebrew/actions/setup-homebrew@1f8e202ffddf94def7f42f6fa3a482e821489f9c # 2026.07.10.1
+
+      # `brew audit`/`test` only accept formula names, not paths, so expose this
+      # checkout to Homebrew as the getprovenant/tap tap.
+      - name: Register the checkout as a local tap
+        run: |
+          tap_dir="$(brew --repository)/Library/Taps/getprovenant/homebrew-tap"
+          mkdir -p "$(dirname "$tap_dir")"
+          ln -s "$GITHUB_WORKSPACE" "$tap_dir"
 
       - name: Audit the formula
-        run: brew audit --strict --online --formula ./Formula/provenant.rb
+        run: brew audit --strict --online getprovenant/tap/provenant
 
       - name: Install from the formula
-        run: brew install --formula ./Formula/provenant.rb
+        run: brew install getprovenant/tap/provenant
 
       - name: Test the formula
-        run: brew test --formula ./Formula/provenant.rb
+        run: brew test getprovenant/tap/provenant

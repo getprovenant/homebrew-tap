@@ -1,0 +1,32 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Check out the tap
+        uses: actions/checkout@v4
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Audit the formula
+        run: brew audit --strict --online --formula ./Formula/provenant.rb
+
+      - name: Install from the formula
+        run: brew install --formula ./Formula/provenant.rb
+
+      - name: Test the formula
+        run: brew test --formula ./Formula/provenant.rb

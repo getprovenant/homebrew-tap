@@ -1,28 +1,28 @@
 class Provenant < Formula
   desc "Fast Rust code scanner for licenses, copyrights, and package provenance"
   homepage "https://github.com/getprovenant/provenant"
-  version "0.2.6"
+  version "0.2.7"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/getprovenant/provenant/releases/download/v0.2.6/provenant-macos-aarch64.tar.gz"
-      sha256 "11f5cd5c7c73a00226128eda5ef5acf4ed99c9d0952e2cf5d9fbb88aaecef19e"
+      url "https://github.com/getprovenant/provenant/releases/download/v0.2.7/provenant-macos-aarch64.tar.gz"
+      sha256 "a6f2d80f38d3849caafc5f593766b8d6174d990c1c9fb11d4c8c00030884eedb"
     end
     on_intel do
-      url "https://github.com/getprovenant/provenant/releases/download/v0.2.6/provenant-macos-x86_64.tar.gz"
-      sha256 "d37eea26dfd3e17006e497377a2871b865aa869495e5b900ef6c9e77a929cda2"
+      url "https://github.com/getprovenant/provenant/releases/download/v0.2.7/provenant-macos-x86_64.tar.gz"
+      sha256 "47aab761a910c0e03e67c4816daa8c96568e3720a80c29a1339568b1da9def0b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/getprovenant/provenant/releases/download/v0.2.6/provenant-linux-aarch64.tar.gz"
-      sha256 "5521d418517cbed63e898883b1ad24e7e944d3b4b4d0c374196255433db31d1b"
+      url "https://github.com/getprovenant/provenant/releases/download/v0.2.7/provenant-linux-aarch64.tar.gz"
+      sha256 "dc625800159d88ad91ca0a712ce4012f395d3031aaaa37ac5eb2b349b2a0e8ff"
     end
     on_intel do
-      url "https://github.com/getprovenant/provenant/releases/download/v0.2.6/provenant-linux-x86_64.tar.gz"
-      sha256 "52f17ad4e540af05b57bdeb9d2d74e282ca14c9a6bb79f9b98420812f48d2c15"
+      url "https://github.com/getprovenant/provenant/releases/download/v0.2.7/provenant-linux-x86_64.tar.gz"
+      sha256 "1dc920abbe6ec7138ca3fea18876cb33393452894fc1e030f5603399d06a0c38"
     end
   end
 

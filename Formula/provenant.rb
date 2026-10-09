@@ -5,23 +5,23 @@ class Provenant < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/getprovenant/provenant/releases/download/v1.0.11/provenant-macos-aarch64.tar.gz"
-      sha256 "c092a5e15057282152c028d2b8132b9a5b075da1d673d18f2d87e5c274334bd0"
+      url "https://github.com/getprovenant/provenant/releases/download/v1.0.12/provenant-macos-aarch64.tar.gz"
+      sha256 "0df16085a8670c35ff314b76f258ad2e1c8f701ef3b6f8098c05c7bd04bb1421"
     end
     on_intel do
-      url "https://github.com/getprovenant/provenant/releases/download/v1.0.11/provenant-macos-x86_64.tar.gz"
-      sha256 "db92835cdbcaf99b896f2cbc2b90d5d75787a8cd430e451bfc9c73ec9a91411d"
+      url "https://github.com/getprovenant/provenant/releases/download/v1.0.12/provenant-macos-x86_64.tar.gz"
+      sha256 "7716eb5fe1836eddef87f8768462648db0db87aa44e7f906a807d232ec48be9f"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/getprovenant/provenant/releases/download/v1.0.11/provenant-linux-aarch64.tar.gz"
-      sha256 "75f8eb90789e2c23fe25fbf1a67d92c7a31f381fb0ca9f8cc6d4e43655f9a4f9"
+      url "https://github.com/getprovenant/provenant/releases/download/v1.0.12/provenant-linux-aarch64.tar.gz"
+      sha256 "2f7afe70e575de276e13fb7f7a9abaca682a4fa71bbb6c730645b565f2919b07"
     end
     on_intel do
-      url "https://github.com/getprovenant/provenant/releases/download/v1.0.11/provenant-linux-x86_64.tar.gz"
-      sha256 "0001d43690868a534dd659b17b5e214753784d991a3f93f262d7167027dc6bfc"
+      url "https://github.com/getprovenant/provenant/releases/download/v1.0.12/provenant-linux-x86_64.tar.gz"
+      sha256 "b4ff29f03a5a19b751cfc6ae194ac9d6ea80f324178964adb68994fe844dca02"
     end
   end
 
